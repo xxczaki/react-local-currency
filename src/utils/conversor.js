@@ -1,11 +1,9 @@
-import * as fx from 'money'
+import {Cashify} from 'cashify'
 
 const conversor = ({ rates, base }) => {
-  const fxInstance = fx.factory()
-  fxInstance.rates = rates
-  fxInstance.base = base
+  const cashify = new Cashify({base, rates})
 
-  return fxInstance
+  return cashify
 }
 
 export default conversor
